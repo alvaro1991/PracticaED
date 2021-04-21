@@ -1,37 +1,8 @@
-## Welcome to GitHub Pages
+Esta es la Actividad de Aprendizaje de la asignatura de entornos de desarrollo,
 
-You can use the [editor on GitHub](https://github.com/alvaro1991/PracticaED/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Consiste en una aplicación java que muestra y registra objetos de 3 clases diferentes mediante la consola
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+La rama en la que está todo el código es la develop, se han hecho 3 pull request de distintas funcionalidades.
 
-### Markdown
+Se ha implementado un job en el jenkins de mi máquina para que compile el proyecto y sonarqube en otra máuina virtual realice la revisión de la calidad del código.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/alvaro1991/PracticaED/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
