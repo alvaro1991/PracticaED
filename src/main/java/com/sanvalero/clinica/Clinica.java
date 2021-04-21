@@ -1,11 +1,12 @@
 package com.sanvalero.clinica;
 
 
+import com.sanvalero.clinica.domain.Gato;
+import com.sanvalero.clinica.domain.Perro;
+import com.sanvalero.clinica.domain.Veterinario;
+
 import java.util.ArrayList;
 import java.util.Scanner;
-import com.sanvalero.clinica.domain.Perro;
-import com.sanvalero.clinica.domain.Gato;
-import com.sanvalero.clinica.domain.Veterinario;
 
 public class Clinica {
     
@@ -39,19 +40,19 @@ public class Clinica {
                     registrarPerro();
                     break;
                 case "2":
-              
+                    vertodoslosPerros();
                     break;
                 case "3":
                     registrarGato();
                     break;
                 case "4":
-
+                    vertodoslosGatos();
                     break;
                 case "5":
                     registrarNuevoTrabajador();
                     break;
                 case "6":
-
+                    vertodoslosTrabajadores();
                     break;
                 case "x":
                     salir();
@@ -95,7 +96,11 @@ public class Clinica {
 
     }
 
-
+    public void vertodoslosPerros(){
+        for (Perro perros: perrosclinica) {
+            System.out.println(perros.toString());
+        }
+    }
 
     public void registrarGato(){
 
@@ -130,7 +135,11 @@ public class Clinica {
 
     }
 
-
+    public void vertodoslosGatos(){
+        for (Gato gatos: gatosclinica) {
+            System.out.println(gatos.toString());
+        }
+    }
 
     public void registrarNuevoTrabajador(){
 
@@ -160,7 +169,11 @@ public class Clinica {
 
     }
 
-
+    public void vertodoslosTrabajadores(){
+        for (Veterinario veterinarios: trabajadoresClinica) {
+            System.out.println(veterinarios.toString());
+        }
+    }
     
     private void salir() {
         salir = true;
