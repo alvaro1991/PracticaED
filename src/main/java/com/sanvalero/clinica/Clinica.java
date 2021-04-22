@@ -91,6 +91,16 @@ public class Clinica {
         String color = teclado.next();
         perro.setColor(color);
 
+        //Comprobamos que en el listado que tenemos no exista uno con las mismas características ye vitamos registros repetidos
+        if(!perrosclinica.isEmpty()){
+            for (Perro perros: perrosclinica) {
+                if (perro.equals(perros)) {
+                    System.out.println("Ya existe un perro con esos datos");
+                    System.out.println("Introduce otro");
+                    ejecutar();
+                }
+            }
+        }
 
         perrosclinica.add(perro);
 
@@ -130,6 +140,16 @@ public class Clinica {
         String color = teclado.next();
         gato.setColor(color);
 
+        //Comprobamos que en el listado que tenemos no exista uno con las mismas características y evitamos registros repetidos
+        if(!gatosclinica.isEmpty()){
+            for (Gato gatos: gatosclinica) {
+                if (gato.equals(gatos)) {
+                    System.out.println("Ya existe un gato con esos datos");
+                    System.out.println("Introduce otro");
+                    ejecutar();
+                }
+            }
+        }
 
         gatosclinica.add(gato);
 
@@ -164,6 +184,17 @@ public class Clinica {
         System.out.println("Sexo?:");
         String sexoTrabajador = teclado.nextLine();
         veterinario.setSexo(sexoTrabajador);
+
+        //Comprobamos que en el listado que tenemos no exista uno con las mismas características y evitamos registros repetidos
+        if(!trabajadoresClinica.isEmpty()){
+            for (Veterinario veterinarios: trabajadoresClinica) {
+                if (veterinario.equals(veterinarios)) {
+                    System.out.println("Ya existe un trabajador con esos datos");
+                    System.out.println("Introduce otro");
+                    ejecutar();
+                }
+            }
+        }
 
         trabajadoresClinica.add(veterinario);
 

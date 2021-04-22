@@ -1,5 +1,7 @@
 package com.sanvalero.clinica.domain;
 
+import java.util.Objects;
+
 public class Veterinario {
 
     public String nombre;
@@ -60,4 +62,17 @@ public class Veterinario {
                 ", titulado universitario=" + tituladoUniversitario +
                 ", sexo='" + sexo + '\'';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Veterinario)) return false;
+        Veterinario that = (Veterinario) o;
+        return edad == that.edad &&
+                Float.compare(that.añosExperiencia, añosExperiencia) == 0 &&
+                tituladoUniversitario == that.tituladoUniversitario &&
+                Objects.equals(nombre, that.nombre) &&
+                Objects.equals(sexo, that.sexo);
+    }
+
 }

@@ -1,5 +1,7 @@
 package com.sanvalero.clinica.domain;
 
+import java.util.Objects;
+
 public class Gato {
 
     public String nombre;
@@ -72,6 +74,17 @@ public class Gato {
                 ", color='" + color + '\'';
     }
 
-
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Gato)) return false;
+        Gato gato = (Gato) o;
+        return Float.compare(gato.peso, peso) == 0 &&
+                edad == gato.edad &&
+                numChip == gato.numChip &&
+                Objects.equals(nombre, gato.nombre) &&
+                Objects.equals(raza, gato.raza) &&
+                Objects.equals(color, gato.color);
+    }
 
 }

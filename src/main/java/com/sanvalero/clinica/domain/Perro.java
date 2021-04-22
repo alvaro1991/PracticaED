@@ -1,5 +1,7 @@
 package com.sanvalero.clinica.domain;
 
+import java.util.Objects;
+
 public class Perro {
 
     public String nombre;
@@ -71,4 +73,18 @@ public class Perro {
                 ", numChip= " + numChip +
                 ", color= '" + color + '\'';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Perro)) return false;
+        Perro perro = (Perro) o;
+        return Float.compare(perro.peso, peso) == 0 &&
+                edad == perro.edad &&
+                numChip == perro.numChip &&
+                Objects.equals(nombre, perro.nombre) &&
+                Objects.equals(raza, perro.raza) &&
+                Objects.equals(color, perro.color);
+    }
+
 }
